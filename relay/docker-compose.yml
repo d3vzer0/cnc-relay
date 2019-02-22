@@ -2,5 +2,8 @@ version: '2'
 services:
   haproxy:
     image: haproxy:latest
+    environment:
+      PROXYIP: ""
+      PROXYPORT: 8080
     volumes:
       - "./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
