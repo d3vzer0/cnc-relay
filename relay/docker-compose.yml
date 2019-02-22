@@ -1,0 +1,6 @@
+version: '2'
+services:
+  haproxy:
+    image: haproxy:latest
+    volumes:
+      - "./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
