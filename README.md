@@ -1,0 +1,4 @@
+# cnc-relay
+During a red team exercise it's common to set up a relaying infrastructure to seperate your external facing footprint from the actual command and control backend. Some of the popular light-weight options are to set up either HAProxy or NGINX on disposable cloud infrastructure and proxy traffic to an internal and/or secured host where an operator has access to the command and control framework. Even though this setup works in most cases, metadata such as the original source IP of a beacon is lost.
+
+This repository contains two docker environments that allows you to set up an example Command and Control environment with relays but still retain the original source IP of a beacon. More details can be found on my blogpost @ https://www.d3vzer0.com/retain-beacon-source-ip-with-haproxy-relays/
