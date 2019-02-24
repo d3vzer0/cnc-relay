@@ -8,7 +8,7 @@ services:
     links: 
       - haproxy
     environment:
-      TS_IP: "127.0.0.1"
+      TS_IP: ""
       TS_PASSWORD: ""
     volumes:
       - "/opt/your_cs_dir:/opt/cobaltstrike"
@@ -19,15 +19,11 @@ services:
       - NET_ADMIN
       - NET_RAW
     environment:
-      PROXYIP: "teamserver"
-      PROXYPORT: 80
+      TSIP: "teamserver"
+      TSPORT: 80
+      ADMINPORT: 50050
     ports:
       - "8080:8080"
       - "9090:9090"
     volumes:
       - "./haproxy:/etc/haproxy"
-
-
-networks:
-  proxynetwork:
-  csnetwork:
