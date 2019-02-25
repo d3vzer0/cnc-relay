@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Static sleep to wait for CS route to start up
+sleep 5
+
 # Set IPtables DIVERT before starting HAPROXY
 /sbin/iptables -t mangle -N DIVERT
 /sbin/iptables -t mangle -A PREROUTING -p tcp -m socket -j DIVERT

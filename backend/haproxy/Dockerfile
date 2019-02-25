@@ -23,6 +23,6 @@ WORKDIR /etc/haproxy
 # Copy and set iptables and route config
 COPY start_routing.sh .
 COPY haproxy.cfg .
-RUN chmod +x ./start_routing.sh 
+RUN ["chmod", "+x", "/etc/haproxy/start_routing.sh"]
 
 CMD ["./start_routing.sh"]
